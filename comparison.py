@@ -7,13 +7,19 @@ class ComParisonAns(object):
         if len(out)>max:
             return 2#oe
         if gle:
-            ans=self.copyenkg(ans)
-            ans=self.copyenkg(ans)
-            out=self.copyenkg(out)
-            out=self.copyenkg(out)
+            if len(ans)!=0:
+                ans=self.copyenkg(ans)
+            if len(ans)!=0:
+                ans=self.copyenkg(ans)
+            if len(out)!=0:
+                out=self.copyenkg(out)
+            if len(out)!=0:
+                out=self.copyenkg(out)
         if ans==out:
             return 0#正确
         acs=0
+        if len(out)==0 or len(ans)==0:
+            return -1
         for i in range(len(ans)):
             if ans[i]==out[i]:
                 acs=acs+1

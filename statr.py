@@ -26,3 +26,6 @@ class OLE(object):
 class UKE(object):
     allName="Unknown Error"
     chinese="出现未知错误"
+class LBE(object):
+    allName="Libray Error"
+    chinese="库文件错误"
